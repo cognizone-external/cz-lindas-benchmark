@@ -8,7 +8,7 @@ const stepDuration = 120; // seconds
 
 const endpoint = __ENV.SPARQL_ENDPOINT;
 const startStr = __ENV.START || "0";
-const endStr = __ENV.END || "801";
+const endStr = __ENV.END || "256";
 const start = parseInt(startStr);
 const end = parseInt(endStr);
 
