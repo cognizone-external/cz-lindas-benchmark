@@ -1,0 +1,5 @@
+PREFIX schema: <http://schema.org/>
+
+SELECT ?unversionedIri WHERE {
+  ?unversionedIri schema:hasPart <https://energy.ld.admin.ch/elcom/electricityprice> .
+}

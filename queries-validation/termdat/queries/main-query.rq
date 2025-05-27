@@ -1,0 +1,1458 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+PREFIX aschema: <https://schema.ld.admin.ch/>
+
+SELECT DISTINCT
+    ?Header_Terminologiesammlung
+    ?Header_TERMDAT_Link
+    ?Header_Fachgebiet
+
+    #####GERMAN
+    ?DES_Name_1
+    ?DES_Name_Quelle_1
+    ?DES_Terminus_1
+    ?DES_Terminus_Quelle_1
+    ?DES_Abkürzung_1
+    ?DES_Abkürzung_Quelle_1
+    ?DES_Phraseologie_1
+    ?DES_Phraseologie_Quelle_1
+    ?DES_Definition_1
+    ?DES_Definition_Quelle_1
+    ?DES_Anmerkung_1
+    ?DES_Anmerkung_Quelle_1
+    ?DES_Land_1
+
+    ?DES_Name_2
+    ?DES_Name_Quelle_2
+    ?DES_Terminus_2
+    ?DES_Terminus_Quelle_2
+    ?DES_Phraseologie_2
+    ?DES_Phraseologie_Quelle_2
+    ?DES_Definition_2
+    ?DES_Definition_Quelle_2
+    ?DES_Anmerkung_2
+    ?DES_Anmerkung_Quelle_2
+    ?DES_Land_2
+
+
+    ?DES_Name_3
+    ?DES_Name_Quelle_3
+    ?DES_Terminus_3
+    ?DES_Terminus_Quelle_3
+    ?DES_Phraseologie_3
+    ?DES_Phraseologie_Quelle_3
+    ?DES_Definition_3
+    ?DES_Definition_Quelle_3
+    ?DES_Anmerkung_3
+    ?DES_Anmerkung_Quelle_3
+    ?DES_Land_3
+
+    #####FRENCH
+    ?FRS_Name_1
+    ?FRS_Name_Quelle_1
+    ?FRS_Terminus_1
+    ?FRS_Terminus_Quelle_1
+    ?FRS_Abkürzung_1
+    ?FRS_Abkürzung_Quelle_1
+    ?FRS_Phraseologie_1
+    ?FRS_Phraseologie_Quelle_1
+    ?FRS_Definition_1
+    ?FRS_Definition_Quelle_1
+    ?FRS_Anmerkung_1
+    ?FRS_Anmerkung_Quelle_1
+    ?FRS_Land_1
+
+    ?FRS_Name_2
+    ?FRS_Name_Quelle_2
+    ?FRS_Terminus_2
+    ?FRS_Terminus_Quelle_2
+    ?FRS_Phraseologie_2
+    ?FRS_Phraseologie_Quelle_2
+    ?FRS_Definition_2
+    ?FRS_Definition_Quelle_2
+    ?FRS_Anmerkung_2
+    ?FRS_Anmerkung_Quelle_2
+    ?FRS_Land_2
+
+
+    ?FRS_Name_3
+    ?FRS_Name_Quelle_3
+    ?FRS_Terminus_3
+    ?FRS_Terminus_Quelle_3
+    ?FRS_Phraseologie_3
+    ?FRS_Phraseologie_Quelle_3
+    ?FRS_Definition_3
+    ?FRS_Definition_Quelle_3
+    ?FRS_Anmerkung_3
+    ?FRS_Anmerkung_Quelle_3
+    ?FRS_Land_3
+
+    #####ITALIAN
+    ?ITS_Name_1
+    ?ITS_Name_Quelle_1
+    ?ITS_Terminus_1
+    ?ITS_Terminus_Quelle_1
+    ?ITS_Abkürzung_1
+    ?ITS_Abkürzung_Quelle_1
+    ?ITS_Phraseologie_1
+    ?ITS_Phraseologie_Quelle_1
+    ?ITS_Definition_1
+    ?ITS_Definition_Quelle_1
+    ?ITS_Anmerkung_1
+    ?ITS_Anmerkung_Quelle_1
+    ?ITS_Land_1
+
+    ?ITS_Name_2
+    ?ITS_Name_Quelle_2
+    ?ITS_Terminus_2
+    ?ITS_Terminus_Quelle_2
+    ?ITS_Phraseologie_2
+    ?ITS_Phraseologie_Quelle_2
+    ?ITS_Definition_2
+    ?ITS_Definition_Quelle_2
+    ?ITS_Anmerkung_2
+    ?ITS_Anmerkung_Quelle_2
+    ?ITS_Land_2
+
+
+    ?ITS_Name_3
+    ?ITS_Name_Quelle_3
+    ?ITS_Terminus_3
+    ?ITS_Terminus_Quelle_3
+    ?ITS_Phraseologie_3
+    ?ITS_Phraseologie_Quelle_3
+    ?ITS_Definition_3
+    ?ITS_Definition_Quelle_3
+    ?ITS_Anmerkung_3
+    ?ITS_Anmerkung_Quelle_3
+    ?ITS_Land_3
+
+
+    #####ROMANSH
+    ?RMS_Name_1
+    ?RMS_Name_Quelle_1
+    ?RMS_Terminus_1
+    ?RMS_Terminus_Quelle_1
+    ?RMS_Abkürzung_1
+    ?RMS_Abkürzung_Quelle_1
+    ?RMS_Phraseologie_1
+    ?RMS_Phraseologie_Quelle_1
+    ?RMS_Definition_1
+    ?RMS_Definition_Quelle_1
+    ?RMS_Anmerkung_1
+    ?RMS_Anmerkung_Quelle_1
+    ?RMS_Land_1
+
+    ?RMS_Name_2
+    ?RMS_Name_Quelle_2
+    ?RMS_Terminus_2
+    ?RMS_Terminus_Quelle_2
+    ?RMS_Phraseologie_2
+    ?RMS_Phraseologie_Quelle_2
+    ?RMS_Definition_2
+    ?RMS_Definition_Quelle_2
+    ?RMS_Anmerkung_2
+    ?RMS_Anmerkung_Quelle_2
+    ?RMS_Land_2
+
+
+    ?RMS_Name_3
+    ?RMS_Name_Quelle_3
+    ?RMS_Terminus_3
+    ?RMS_Terminus_Quelle_3
+    ?RMS_Phraseologie_3
+    ?RMS_Phraseologie_Quelle_3
+    ?RMS_Definition_3
+    ?RMS_Definition_Quelle_3
+    ?RMS_Anmerkung_3
+    ?RMS_Anmerkung_Quelle_3
+    ?RMS_Land_3
+
+
+    #####ENGLISH
+    ?ENG_Name_1
+    ?ENG_Name_Quelle_1
+    ?ENG_Terminus_1
+    ?ENG_Terminus_Quelle_1
+    ?ENG_Abkürzung_1
+    ?ENG_Abkürzung_Quelle_1
+    ?ENG_Phraseologie_1
+    ?ENG_Phraseologie_Quelle_1
+    ?ENG_Definition_1
+    ?ENG_Definition_Quelle_1
+    ?ENG_Anmerkung_1
+    ?ENG_Anmerkung_Quelle_1
+    ?ENG_Land_1
+
+    ?ENG_Name_2
+    ?ENG_Name_Quelle_2
+    ?ENG_Terminus_2
+    ?ENG_Terminus_Quelle_2
+    ?ENG_Phraseologie_2
+    ?ENG_Phraseologie_Quelle_2
+    ?ENG_Definition_2
+    ?ENG_Definition_Quelle_2
+    ?ENG_Anmerkung_2
+    ?ENG_Anmerkung_Quelle_2
+    ?ENG_Land_2
+
+
+    ?ENG_Name_3
+    ?ENG_Name_Quelle_3
+    ?ENG_Terminus_3
+    ?ENG_Terminus_Quelle_3
+    ?ENG_Phraseologie_3
+    ?ENG_Phraseologie_Quelle_3
+    ?ENG_Definition_3
+    ?ENG_Definition_Quelle_3
+    ?ENG_Anmerkung_3
+    ?ENG_Anmerkung_Quelle_3
+    ?ENG_Land_3
+
+
+    ?LINDAS_Link
+
+FROM <https://lindas.admin.ch/fch/termdat> {
+
+    # Sammlung
+    VALUES ?collection {termdat:DEC19}
+
+    # Entry, TERMDAT-Link
+    {
+        ?entry a schema:DefinedTerm.
+        ?entry schema:inDefinedTermSet ?collection .
+        BIND (?entry as ?Header_TERMDAT_Link).
+        BIND (iri(CONCAT(str(?entry),"?disableSchemaUrlRedirect=true")) as ?LINDAS_Link).  #TODO remove
+    }
+
+    # Terminologiesammlung
+    {
+        ?collection a aschema:TerminologyCollection;
+            schema:name ?collectionName;
+            schema:identifier ?collectionId. FILTER (lang(?collectionName) = "de").
+        BIND (CONCAT(?collectionId, " - ", ?collectionName) as ?Header_Terminologiesammlung).
+    }
+
+    # Fachgebiet
+    {
+        SELECT ?entry (GROUP_CONCAT(?domainName; separator=", ") AS ?Header_Fachgebiet)  WHERE {
+            ?entry aschema:termDomain ?domain.
+            ?domain schema:name ?domainName. FILTER(lang(?domainName) = "de")
+        } GROUP BY ?entry
+    }
+
+
+    ### GERMAN
+    {
+        SELECT DISTINCT
+            ?entry
+
+            ?DES_Name_1
+            ?DES_Name_Quelle_1
+            ?DES_Name_2
+            ?DES_Name_Quelle_2
+            ?DES_Name_3
+            ?DES_Name_Quelle_3
+
+            ?DES_Terminus_1
+            ?DES_Terminus_Quelle_1
+            ?DES_Terminus_2
+            ?DES_Terminus_Quelle_2
+            ?DES_Terminus_3
+            ?DES_Terminus_Quelle_3
+
+            ?DES_Phraseologie_1
+            ?DES_Phraseologie_Quelle_1
+            ?DES_Phraseologie_2
+            ?DES_Phraseologie_Quelle_2
+            ?DES_Phraseologie_3
+            ?DES_Phraseologie_Quelle_3
+
+            ?DES_Definition_1
+            ?DES_Definition_Quelle_1
+            ?DES_Definition_2
+            ?DES_Definition_Quelle_2
+            ?DES_Definition_3
+            ?DES_Definition_Quelle_3
+
+            ?DES_Abkürzung_1
+            ?DES_Abkürzung_Quelle_1
+
+
+            ?DES_Anmerkung_1
+            ?DES_Anmerkung_Quelle_1
+            ?DES_Anmerkung_2
+            ?DES_Anmerkung_Quelle_2
+            ?DES_Anmerkung_3
+            ?DES_Anmerkung_Quelle_3
+
+            ?DES_Land_1
+            ?DES_Land_2
+            ?DES_Land_3
+        WHERE {
+            BIND ("de" as ?l).
+            ?entry a schema:DefinedTerm.
+
+            # Abkürzung
+            OPTIONAL {
+                ?entry schema:alternateName ?DES_Abkürzung_1. FILTER(lang(?DES_Abkürzung_1) = ?l)
+                ?entry schema:hasPart ?alternateNamePart.
+                ?alternateNamePart a aschema:Abbreviation.
+                #?alternateNamePart schema:name ?DES_Abkürzung_1. FILTER(lang(?DES_Abkürzung_1) = ?l). # To exclude Synonyms.
+                FILTER(STRENDS(str(?alternateNamePart),"abbreviation"))
+                ?alternateNamePart schema:citation ?DES_Abkürzung_Quelle_1. FILTER(lang(?DES_Abkürzung_Quelle_1) = ?l).
+            }
+
+            # Land
+            OPTIONAL {
+                ?entry aschema:applicableCountry ?DES_Land_1. FILTER(lang(?DES_Land_1) = ?l)
+            }
+
+            # Definition
+            OPTIONAL {
+                ?entry schema:description ?DES_Definition_1. FILTER(lang(?DES_Definition_1) = ?l)
+
+                ?entry aschema:descriptionCitation ?DES_Definition_Quelle_1. FILTER(lang(?DES_Definition_Quelle_1) = ?l)
+            }
+
+            # Anmerkung
+            OPTIONAL {
+                ?entry aschema:termNote ?DES_Anmerkung_1. FILTER(lang(?DES_Anmerkung_1) = ?l)
+
+            }
+            # Anmerkung Quelle
+            OPTIONAL {
+                ?entry aschema:termNoteCitation ?DES_Anmerkung_Quelle_1. FILTER(lang(?DES_Anmerkung_Quelle_1) = ?l)
+            }
+
+            # Name
+            OPTIONAL {
+                ?entry a aschema:Name.
+                ?entry schema:name ?DES_Name_1. FILTER(lang(?DES_Name_1) = ?l)
+                ?entry schema:citation ?DES_Name_Quelle_1. FILTER(lang(?DES_Name_Quelle_1) = ?l)
+
+            }
+
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?namePart.
+                ?namePart a aschema:Name.
+                FILTER(STRENDS(str(?phraseologyPart),"name"))
+                ?namePart schema:name ?DES_Name_1. FILTER(lang(?DES_Name_1) = ?l)
+                ?namePart schema:citation ?DES_Name_Quelle_1. FILTER(lang(?DES_Name_Quelle_1) = ?l)
+
+            }
+
+            # Term
+            OPTIONAL {
+                ?entry a aschema:Term.
+                ?entry schema:name ?DES_Terminus_1. FILTER(lang(?DES_Terminus_1) = ?l)
+
+                ?entry schema:citation ?DES_Terminus_Quelle_1. FILTER(lang(?DES_Terminus_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?termPart.
+                ?termPart a aschema:Term.
+                FILTER(STRENDS(str(?phraseologyPart),"term"))
+                ?termPart schema:name ?DES_Terminus_1. FILTER(lang(?DES_Terminus_1) = ?l)
+                ?termPart schema:citation ?DES_Terminus_Quelle_1. FILTER(lang(?DES_Terminus_Quelle_1) = ?l)
+
+            }
+
+            # Phraseology
+            OPTIONAL {
+                ?entry a aschema:Phraseology.
+                ?entry schema:name ?DES_Phraseologie_1. FILTER(lang(?DES_Phraseologie_1) = ?l)
+
+                ?entry schema:citation ?DES_Phraseologie_Quelle_1. FILTER(lang(?DES_Phraseologie_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?phraseologyPart.
+                ?phraseologyPart a aschema:Phraseology.
+                FILTER(STRENDS(str(?phraseologyPart),"phraseology"))
+                ?phraseologyPart schema:name ?DES_Phraseologie_1. FILTER(lang(?DES_Phraseologie_1) = ?l)
+                ?phraseologyPart schema:citation ?DES_Phraseologie_Quelle_1. FILTER(lang(?DES_Phraseologie_Quelle_1) = ?l)
+            }
+
+
+            # Land.2
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart2.
+                FILTER(STRENDS(str(?landPart2),concat("/2/",?l)))
+                ?landPart2 aschema:applicableCountry ?DES_Land_2. FILTER(lang(?DES_Land_2) = ?l).
+            }
+            # Land.3
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart3.
+                FILTER(STRENDS(str(?landPart3),concat("/3/",?l)))
+                ?landPart3 aschema:applicableCountry ?DES_Land_3. FILTER(lang(?DES_Land_3) = ?l).
+            }
+
+            # Definition.2
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart2.
+                FILTER(STRENDS(str(?definitionPart2),concat("/2/",?l)))
+                ?definitionPart2 schema:description ?DES_Definition_2. FILTER(lang(?DES_Definition_2) = ?l)
+                ?definitionPart2 aschema:descriptionCitation ?DES_Definition_Quelle_2. FILTER(lang(?DES_Definition_Quelle_2) = ?l)
+            }
+            # Definition.3
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart3.
+                FILTER(STRENDS(str(?definitionPart3),concat("/3/",?l)))
+                ?definitionPart3 schema:description ?DES_Definition_3. FILTER(lang(?DES_Definition_3) = ?l)
+                ?definitionPart3 aschema:descriptionCitation ?DES_Definition_Quelle_3. FILTER(lang(?DES_Definition_Quelle_3) = ?l)
+            }
+
+            # Anmerkung.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart2.
+                FILTER(STRENDS(str(?termNotePart2),concat("/2/",?l)))
+                ?termNotePart2 aschema:termNote ?DES_Anmerkung_2. FILTER(lang(?DES_Anmerkung_2) = ?l)
+            }
+            # Anmerkung.2 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart2.
+                FILTER(STRENDS(str(?termNoteCitationPart2),concat("/2/",?l)))
+                ?termNoteCitationPart2 aschema:termNoteCitation ?DES_Anmerkung_Quelle_2. FILTER(lang(?DES_Anmerkung_Quelle_2) = ?l)
+            }
+            # Anmerkung.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart3.
+                FILTER(STRENDS(str(?termNotePart3),concat("/3/",?l)))
+                ?termNotePart3 aschema:termNote ?DES_Anmerkung_3. FILTER(lang(?DES_Anmerkung_3) = ?l)
+            }
+            # Anmerkung.3 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart3.
+                FILTER(STRENDS(str(?termNoteCitationPart3),concat("/3/",?l)))
+                ?termNoteCitationPart3 aschema:termNoteCitation ?DES_Anmerkung_Quelle_3. FILTER(lang(?DES_Anmerkung_Quelle_3) = ?l)
+            }
+
+            # Name.2
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart2.
+                FILTER(STRENDS(str(?namePart2),concat("/2/",?l)))
+                ?namePart2 a aschema:Name.
+                ?namePart2 schema:name ?DES_Name_2. FILTER(lang(?DES_Name_2) = ?l)
+                ?namePart2 schema:citation ?DES_Name_Quelle_2. FILTER(lang(?DES_Name_Quelle_2) = ?l)
+            }
+            # Name.3
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart3.
+                FILTER(STRENDS(str(?namePart3),concat("/3/",?l)))
+                ?namePart3 a aschema:Name.
+                ?namePart3 schema:name ?DES_Name_3. FILTER(lang(?DES_Name_3) = ?l)
+                ?namePart3 schema:citation ?DES_Name_Quelle_3. FILTER(lang(?DES_Name_Quelle_3) = ?l)
+            }
+
+            # Term.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart2.
+                FILTER(STRENDS(str(?termPart2),concat("/2/",?l)))
+                ?termPart2 a aschema:Term.
+                ?termPart2 schema:name ?DES_Terminus_2. FILTER(lang(?DES_Terminus_2) = ?l)
+                ?termPart2 schema:citation ?DES_Terminus_Quelle_2. FILTER(lang(?DES_Terminus_Quelle_2) = ?l)
+            }
+            # Term.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart3.
+                FILTER(STRENDS(str(?termPart3),concat("/3/",?l)))
+                ?termPart3 a aschema:Term.
+                ?termPart3 schema:name ?DES_Terminus_3. FILTER(lang(?DES_Terminus_3) = ?l)
+                ?termPart3 schema:citation ?DES_Terminus_Quelle_3. FILTER(lang(?DES_Terminus_Quelle_3) = ?l)
+            }
+
+            # Phraseology.2
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart2.
+                FILTER(STRENDS(str(?phraseologyPart2),concat("/2/",?l)))
+                ?phraseologyPart2 a aschema:Phraseology.
+                ?phraseologyPart2 schema:name ?DES_Phraseologie_2. FILTER(lang(?DES_Phraseologie_2) = ?l)
+                ?phraseologyPart2 schema:citation ?DES_Phraseologie_Quelle_2. FILTER(lang(?DES_Phraseologie_Quelle_2) = ?l)
+            }
+            # Phraseology.3
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart3.
+                FILTER(STRENDS(str(?phraseologyPart3),concat("/3/",?l)))
+                ?phraseologyPart3 a aschema:Phraseology.
+                ?phraseologyPart3 schema:name ?DES_Phraseologie_3. FILTER(lang(?DES_Phraseologie_3) = ?l)
+                ?phraseologyPart3 schema:citation ?DES_Phraseologie_Quelle_3. FILTER(lang(?DES_Phraseologie_Quelle_3) = ?l)
+            }
+
+        }
+    }
+
+
+    ### FRENCH
+    {
+        SELECT DISTINCT
+            ?entry
+
+            ?FRS_Name_1
+            ?FRS_Name_Quelle_1
+            ?FRS_Name_2
+            ?FRS_Name_Quelle_2
+            ?FRS_Name_3
+            ?FRS_Name_Quelle_3
+
+            ?FRS_Terminus_1
+            ?FRS_Terminus_Quelle_1
+            ?FRS_Terminus_2
+            ?FRS_Terminus_Quelle_2
+            ?FRS_Terminus_3
+            ?FRS_Terminus_Quelle_3
+
+            ?FRS_Phraseologie_1
+            ?FRS_Phraseologie_Quelle_1
+            ?FRS_Phraseologie_2
+            ?FRS_Phraseologie_Quelle_2
+            ?FRS_Phraseologie_3
+            ?FRS_Phraseologie_Quelle_3
+
+            ?FRS_Definition_1
+            ?FRS_Definition_Quelle_1
+            ?FRS_Definition_2
+            ?FRS_Definition_Quelle_2
+            ?FRS_Definition_3
+            ?FRS_Definition_Quelle_3
+
+            ?FRS_Abkürzung_1
+            ?FRS_Abkürzung_Quelle_1
+
+
+            ?FRS_Anmerkung_1
+            ?FRS_Anmerkung_Quelle_1
+            ?FRS_Anmerkung_2
+            ?FRS_Anmerkung_Quelle_2
+            ?FRS_Anmerkung_3
+            ?FRS_Anmerkung_Quelle_3
+
+            ?FRS_Land_1
+            ?FRS_Land_2
+            ?FRS_Land_3
+        WHERE {
+            BIND ("fr" as ?l).
+            ?entry a schema:DefinedTerm.
+
+            # Abkürzung
+            OPTIONAL {
+                ?entry schema:alternateName ?FRS_Abkürzung_1. FILTER(lang(?FRS_Abkürzung_1) = ?l)
+                ?entry schema:hasPart ?alternateNamePart.
+                ?alternateNamePart a aschema:Abbreviation.
+                #?alternateNamePart schema:name ?FRS_Abkürzung_1. FILTER(lang(?FRS_Abkürzung_1) = ?l). # To exclude Synonyms.
+                FILTER(STRENDS(str(?alternateNamePart),"abbreviation"))
+                ?alternateNamePart schema:citation ?FRS_Abkürzung_Quelle_1. FILTER(lang(?FRS_Abkürzung_Quelle_1) = ?l).
+            }
+
+            # Land
+            OPTIONAL {
+                ?entry aschema:applicableCountry ?FRS_Land_1. FILTER(lang(?FRS_Land_1) = ?l)
+            }
+
+            # Definition
+            OPTIONAL {
+                ?entry schema:description ?FRS_Definition_1. FILTER(lang(?FRS_Definition_1) = ?l)
+
+                ?entry aschema:descriptionCitation ?FRS_Definition_Quelle_1. FILTER(lang(?FRS_Definition_Quelle_1) = ?l)
+            }
+
+            # Anmerkung
+            OPTIONAL {
+                ?entry aschema:termNote ?FRS_Anmerkung_1. FILTER(lang(?FRS_Anmerkung_1) = ?l)
+
+            }
+            # Anmerkung Quelle
+            OPTIONAL {
+                ?entry aschema:termNoteCitation ?FRS_Anmerkung_Quelle_1. FILTER(lang(?FRS_Anmerkung_Quelle_1) = ?l)
+            }
+
+            # Name
+            OPTIONAL {
+                ?entry a aschema:Name.
+                ?entry schema:name ?FRS_Name_1. FILTER(lang(?FRS_Name_1) = ?l)
+                ?entry schema:citation ?FRS_Name_Quelle_1. FILTER(lang(?FRS_Name_Quelle_1) = ?l)
+
+            }
+
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?namePart.
+                ?namePart a aschema:Name.
+                FILTER(STRENDS(str(?phraseologyPart),"name"))
+                ?namePart schema:name ?FRS_Name_1. FILTER(lang(?FRS_Name_1) = ?l)
+                ?namePart schema:citation ?FRS_Name_Quelle_1. FILTER(lang(?FRS_Name_Quelle_1) = ?l)
+
+            }
+
+            # Term
+            OPTIONAL {
+                ?entry a aschema:Term.
+                ?entry schema:name ?FRS_Terminus_1. FILTER(lang(?FRS_Terminus_1) = ?l)
+
+                ?entry schema:citation ?FRS_Terminus_Quelle_1. FILTER(lang(?FRS_Terminus_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?termPart.
+                ?termPart a aschema:Term.
+                FILTER(STRENDS(str(?phraseologyPart),"term"))
+                ?termPart schema:name ?FRS_Terminus_1. FILTER(lang(?FRS_Terminus_1) = ?l)
+                ?termPart schema:citation ?FRS_Terminus_Quelle_1. FILTER(lang(?FRS_Terminus_Quelle_1) = ?l)
+
+            }
+
+            # Phraseology
+            OPTIONAL {
+                ?entry a aschema:Phraseology.
+                ?entry schema:name ?FRS_Phraseologie_1. FILTER(lang(?FRS_Phraseologie_1) = ?l)
+
+                ?entry schema:citation ?FRS_Phraseologie_Quelle_1. FILTER(lang(?FRS_Phraseologie_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?phraseologyPart.
+                ?phraseologyPart a aschema:Phraseology.
+                FILTER(STRENDS(str(?phraseologyPart),"phraseology"))
+                ?phraseologyPart schema:name ?FRS_Phraseologie_1. FILTER(lang(?FRS_Phraseologie_1) = ?l)
+                ?phraseologyPart schema:citation ?FRS_Phraseologie_Quelle_1. FILTER(lang(?FRS_Phraseologie_Quelle_1) = ?l)
+            }
+
+
+            # Land.2
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart2.
+                FILTER(STRENDS(str(?landPart2),concat("/2/",?l)))
+                ?landPart2 aschema:applicableCountry ?FRS_Land_2. FILTER(lang(?FRS_Land_2) = ?l).
+            }
+            # Land.3
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart3.
+                FILTER(STRENDS(str(?landPart3),concat("/3/",?l)))
+                ?landPart3 aschema:applicableCountry ?FRS_Land_3. FILTER(lang(?FRS_Land_3) = ?l).
+            }
+
+            # Definition.2
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart2.
+                FILTER(STRENDS(str(?definitionPart2),concat("/2/",?l)))
+                ?definitionPart2 schema:description ?FRS_Definition_2. FILTER(lang(?FRS_Definition_2) = ?l)
+                ?definitionPart2 aschema:descriptionCitation ?FRS_Definition_Quelle_2. FILTER(lang(?FRS_Definition_Quelle_2) = ?l)
+            }
+            # Definition.3
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart3.
+                FILTER(STRENDS(str(?definitionPart3),concat("/3/",?l)))
+                ?definitionPart3 schema:description ?FRS_Definition_3. FILTER(lang(?FRS_Definition_3) = ?l)
+                ?definitionPart3 aschema:descriptionCitation ?FRS_Definition_Quelle_3. FILTER(lang(?FRS_Definition_Quelle_3) = ?l)
+            }
+
+            # Anmerkung.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart2.
+                FILTER(STRENDS(str(?termNotePart2),concat("/2/",?l)))
+                ?termNotePart2 aschema:termNote ?FRS_Anmerkung_2. FILTER(lang(?FRS_Anmerkung_2) = ?l)
+            }
+            # Anmerkung.2 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart2.
+                FILTER(STRENDS(str(?termNoteCitationPart2),concat("/2/",?l)))
+                ?termNoteCitationPart2 aschema:termNoteCitation ?FRS_Anmerkung_Quelle_2. FILTER(lang(?FRS_Anmerkung_Quelle_2) = ?l)
+            }
+            # Anmerkung.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart3.
+                FILTER(STRENDS(str(?termNotePart3),concat("/3/",?l)))
+                ?termNotePart3 aschema:termNote ?FRS_Anmerkung_3. FILTER(lang(?FRS_Anmerkung_3) = ?l)
+            }
+            # Anmerkung.3 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart3.
+                FILTER(STRENDS(str(?termNoteCitationPart3),concat("/3/",?l)))
+                ?termNoteCitationPart3 aschema:termNoteCitation ?FRS_Anmerkung_Quelle_3. FILTER(lang(?FRS_Anmerkung_Quelle_3) = ?l)
+            }
+
+            # Name.2
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart2.
+                FILTER(STRENDS(str(?namePart2),concat("/2/",?l)))
+                ?namePart2 a aschema:Name.
+                ?namePart2 schema:name ?FRS_Name_2. FILTER(lang(?FRS_Name_2) = ?l)
+                ?namePart2 schema:citation ?FRS_Name_Quelle_2. FILTER(lang(?FRS_Name_Quelle_2) = ?l)
+            }
+            # Name.3
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart3.
+                FILTER(STRENDS(str(?namePart3),concat("/3/",?l)))
+                ?namePart3 a aschema:Name.
+                ?namePart3 schema:name ?FRS_Name_3. FILTER(lang(?FRS_Name_3) = ?l)
+                ?namePart3 schema:citation ?FRS_Name_Quelle_3. FILTER(lang(?FRS_Name_Quelle_3) = ?l)
+            }
+
+            # Term.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart2.
+                FILTER(STRENDS(str(?termPart2),concat("/2/",?l)))
+                ?termPart2 a aschema:Term.
+                ?termPart2 schema:name ?FRS_Terminus_2. FILTER(lang(?FRS_Terminus_2) = ?l)
+                ?termPart2 schema:citation ?FRS_Terminus_Quelle_2. FILTER(lang(?FRS_Terminus_Quelle_2) = ?l)
+            }
+            # Term.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart3.
+                FILTER(STRENDS(str(?termPart3),concat("/3/",?l)))
+                ?termPart3 a aschema:Term.
+                ?termPart3 schema:name ?FRS_Terminus_3. FILTER(lang(?FRS_Terminus_3) = ?l)
+                ?termPart3 schema:citation ?FRS_Terminus_Quelle_3. FILTER(lang(?FRS_Terminus_Quelle_3) = ?l)
+            }
+
+            # Phraseology.2
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart2.
+                FILTER(STRENDS(str(?phraseologyPart2),concat("/2/",?l)))
+                ?phraseologyPart2 a aschema:Phraseology.
+                ?phraseologyPart2 schema:name ?FRS_Phraseologie_2. FILTER(lang(?FRS_Phraseologie_2) = ?l)
+                ?phraseologyPart2 schema:citation ?FRS_Phraseologie_Quelle_2. FILTER(lang(?FRS_Phraseologie_Quelle_2) = ?l)
+            }
+            # Phraseology.3
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart3.
+                FILTER(STRENDS(str(?phraseologyPart3),concat("/3/",?l)))
+                ?phraseologyPart3 a aschema:Phraseology.
+                ?phraseologyPart3 schema:name ?FRS_Phraseologie_3. FILTER(lang(?FRS_Phraseologie_3) = ?l)
+                ?phraseologyPart3 schema:citation ?FRS_Phraseologie_Quelle_3. FILTER(lang(?FRS_Phraseologie_Quelle_3) = ?l)
+            }
+
+        }
+    }
+
+    ### ITALIAN
+    {
+        SELECT DISTINCT
+            ?entry
+
+            ?ITS_Name_1
+            ?ITS_Name_Quelle_1
+            ?ITS_Name_2
+            ?ITS_Name_Quelle_2
+            ?ITS_Name_3
+            ?ITS_Name_Quelle_3
+
+            ?ITS_Terminus_1
+            ?ITS_Terminus_Quelle_1
+            ?ITS_Terminus_2
+            ?ITS_Terminus_Quelle_2
+            ?ITS_Terminus_3
+            ?ITS_Terminus_Quelle_3
+
+            ?ITS_Phraseologie_1
+            ?ITS_Phraseologie_Quelle_1
+            ?ITS_Phraseologie_2
+            ?ITS_Phraseologie_Quelle_2
+            ?ITS_Phraseologie_3
+            ?ITS_Phraseologie_Quelle_3
+
+            ?ITS_Definition_1
+            ?ITS_Definition_Quelle_1
+            ?ITS_Definition_2
+            ?ITS_Definition_Quelle_2
+            ?ITS_Definition_3
+            ?ITS_Definition_Quelle_3
+
+            ?ITS_Abkürzung_1
+            ?ITS_Abkürzung_Quelle_1
+
+
+            ?ITS_Anmerkung_1
+            ?ITS_Anmerkung_Quelle_1
+            ?ITS_Anmerkung_2
+            ?ITS_Anmerkung_Quelle_2
+            ?ITS_Anmerkung_3
+            ?ITS_Anmerkung_Quelle_3
+
+            ?ITS_Land_1
+            ?ITS_Land_2
+            ?ITS_Land_3
+        WHERE {
+            BIND ("it" as ?l).
+            ?entry a schema:DefinedTerm.
+
+            # Abkürzung
+            OPTIONAL {
+                ?entry schema:alternateName ?ITS_Abkürzung_1. FILTER(lang(?ITS_Abkürzung_1) = ?l)
+                ?entry schema:hasPart ?alternateNamePart.
+                ?alternateNamePart a aschema:Abbreviation.
+                #?alternateNamePart schema:name ?ITS_Abkürzung_1. FILTER(lang(?ITS_Abkürzung_1) = ?l). # To exclude Synonyms.
+                FILTER(STRENDS(str(?alternateNamePart),"abbreviation"))
+                ?alternateNamePart schema:citation ?ITS_Abkürzung_Quelle_1. FILTER(lang(?ITS_Abkürzung_Quelle_1) = ?l).
+            }
+
+            # Land
+            OPTIONAL {
+                ?entry aschema:applicableCountry ?ITS_Land_1. FILTER(lang(?ITS_Land_1) = ?l)
+            }
+
+            # Definition
+            OPTIONAL {
+                ?entry schema:description ?ITS_Definition_1. FILTER(lang(?ITS_Definition_1) = ?l)
+
+                ?entry aschema:descriptionCitation ?ITS_Definition_Quelle_1. FILTER(lang(?ITS_Definition_Quelle_1) = ?l)
+            }
+
+            # Anmerkung
+            OPTIONAL {
+                ?entry aschema:termNote ?ITS_Anmerkung_1. FILTER(lang(?ITS_Anmerkung_1) = ?l)
+
+            }
+            # Anmerkung Quelle
+            OPTIONAL {
+                ?entry aschema:termNoteCitation ?ITS_Anmerkung_Quelle_1. FILTER(lang(?ITS_Anmerkung_Quelle_1) = ?l)
+            }
+
+            # Name
+            OPTIONAL {
+                ?entry a aschema:Name.
+                ?entry schema:name ?ITS_Name_1. FILTER(lang(?ITS_Name_1) = ?l)
+                ?entry schema:citation ?ITS_Name_Quelle_1. FILTER(lang(?ITS_Name_Quelle_1) = ?l)
+
+            }
+
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?namePart.
+                ?namePart a aschema:Name.
+                FILTER(STRENDS(str(?phraseologyPart),"name"))
+                ?namePart schema:name ?ITS_Name_1. FILTER(lang(?ITS_Name_1) = ?l)
+                ?namePart schema:citation ?ITS_Name_Quelle_1. FILTER(lang(?ITS_Name_Quelle_1) = ?l)
+
+            }
+
+            # Term
+            OPTIONAL {
+                ?entry a aschema:Term.
+                ?entry schema:name ?ITS_Terminus_1. FILTER(lang(?ITS_Terminus_1) = ?l)
+
+                ?entry schema:citation ?ITS_Terminus_Quelle_1. FILTER(lang(?ITS_Terminus_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?termPart.
+                ?termPart a aschema:Term.
+                FILTER(STRENDS(str(?phraseologyPart),"term"))
+                ?termPart schema:name ?ITS_Terminus_1. FILTER(lang(?ITS_Terminus_1) = ?l)
+                ?termPart schema:citation ?ITS_Terminus_Quelle_1. FILTER(lang(?ITS_Terminus_Quelle_1) = ?l)
+
+            }
+
+            # Phraseology
+            OPTIONAL {
+                ?entry a aschema:Phraseology.
+                ?entry schema:name ?ITS_Phraseologie_1. FILTER(lang(?ITS_Phraseologie_1) = ?l)
+
+                ?entry schema:citation ?ITS_Phraseologie_Quelle_1. FILTER(lang(?ITS_Phraseologie_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?phraseologyPart.
+                ?phraseologyPart a aschema:Phraseology.
+                FILTER(STRENDS(str(?phraseologyPart),"phraseology"))
+                ?phraseologyPart schema:name ?ITS_Phraseologie_1. FILTER(lang(?ITS_Phraseologie_1) = ?l)
+                ?phraseologyPart schema:citation ?ITS_Phraseologie_Quelle_1. FILTER(lang(?ITS_Phraseologie_Quelle_1) = ?l)
+            }
+
+
+            # Land.2
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart2.
+                FILTER(STRENDS(str(?landPart2),concat("/2/",?l)))
+                ?landPart2 aschema:applicableCountry ?ITS_Land_2. FILTER(lang(?ITS_Land_2) = ?l).
+            }
+            # Land.3
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart3.
+                FILTER(STRENDS(str(?landPart3),concat("/3/",?l)))
+                ?landPart3 aschema:applicableCountry ?ITS_Land_3. FILTER(lang(?ITS_Land_3) = ?l).
+            }
+
+            # Definition.2
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart2.
+                FILTER(STRENDS(str(?definitionPart2),concat("/2/",?l)))
+                ?definitionPart2 schema:description ?ITS_Definition_2. FILTER(lang(?ITS_Definition_2) = ?l)
+                ?definitionPart2 aschema:descriptionCitation ?ITS_Definition_Quelle_2. FILTER(lang(?ITS_Definition_Quelle_2) = ?l)
+            }
+            # Definition.3
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart3.
+                FILTER(STRENDS(str(?definitionPart3),concat("/3/",?l)))
+                ?definitionPart3 schema:description ?ITS_Definition_3. FILTER(lang(?ITS_Definition_3) = ?l)
+                ?definitionPart3 aschema:descriptionCitation ?ITS_Definition_Quelle_3. FILTER(lang(?ITS_Definition_Quelle_3) = ?l)
+            }
+
+            # Anmerkung.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart2.
+                FILTER(STRENDS(str(?termNotePart2),concat("/2/",?l)))
+                ?termNotePart2 aschema:termNote ?ITS_Anmerkung_2. FILTER(lang(?ITS_Anmerkung_2) = ?l)
+            }
+            # Anmerkung.2 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart2.
+                FILTER(STRENDS(str(?termNoteCitationPart2),concat("/2/",?l)))
+                ?termNoteCitationPart2 aschema:termNoteCitation ?ITS_Anmerkung_Quelle_2. FILTER(lang(?ITS_Anmerkung_Quelle_2) = ?l)
+            }
+            # Anmerkung.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart3.
+                FILTER(STRENDS(str(?termNotePart3),concat("/3/",?l)))
+                ?termNotePart3 aschema:termNote ?ITS_Anmerkung_3. FILTER(lang(?ITS_Anmerkung_3) = ?l)
+            }
+            # Anmerkung.3 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart3.
+                FILTER(STRENDS(str(?termNoteCitationPart3),concat("/3/",?l)))
+                ?termNoteCitationPart3 aschema:termNoteCitation ?ITS_Anmerkung_Quelle_3. FILTER(lang(?ITS_Anmerkung_Quelle_3) = ?l)
+            }
+
+            # Name.2
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart2.
+                FILTER(STRENDS(str(?namePart2),concat("/2/",?l)))
+                ?namePart2 a aschema:Name.
+                ?namePart2 schema:name ?ITS_Name_2. FILTER(lang(?ITS_Name_2) = ?l)
+                ?namePart2 schema:citation ?ITS_Name_Quelle_2. FILTER(lang(?ITS_Name_Quelle_2) = ?l)
+            }
+            # Name.3
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart3.
+                FILTER(STRENDS(str(?namePart3),concat("/3/",?l)))
+                ?namePart3 a aschema:Name.
+                ?namePart3 schema:name ?ITS_Name_3. FILTER(lang(?ITS_Name_3) = ?l)
+                ?namePart3 schema:citation ?ITS_Name_Quelle_3. FILTER(lang(?ITS_Name_Quelle_3) = ?l)
+            }
+
+            # Term.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart2.
+                FILTER(STRENDS(str(?termPart2),concat("/2/",?l)))
+                ?termPart2 a aschema:Term.
+                ?termPart2 schema:name ?ITS_Terminus_2. FILTER(lang(?ITS_Terminus_2) = ?l)
+                ?termPart2 schema:citation ?ITS_Terminus_Quelle_2. FILTER(lang(?ITS_Terminus_Quelle_2) = ?l)
+            }
+            # Term.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart3.
+                FILTER(STRENDS(str(?termPart3),concat("/3/",?l)))
+                ?termPart3 a aschema:Term.
+                ?termPart3 schema:name ?ITS_Terminus_3. FILTER(lang(?ITS_Terminus_3) = ?l)
+                ?termPart3 schema:citation ?ITS_Terminus_Quelle_3. FILTER(lang(?ITS_Terminus_Quelle_3) = ?l)
+            }
+
+            # Phraseology.2
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart2.
+                FILTER(STRENDS(str(?phraseologyPart2),concat("/2/",?l)))
+                ?phraseologyPart2 a aschema:Phraseology.
+                ?phraseologyPart2 schema:name ?ITS_Phraseologie_2. FILTER(lang(?ITS_Phraseologie_2) = ?l)
+                ?phraseologyPart2 schema:citation ?ITS_Phraseologie_Quelle_2. FILTER(lang(?ITS_Phraseologie_Quelle_2) = ?l)
+            }
+            # Phraseology.3
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart3.
+                FILTER(STRENDS(str(?phraseologyPart3),concat("/3/",?l)))
+                ?phraseologyPart3 a aschema:Phraseology.
+                ?phraseologyPart3 schema:name ?ITS_Phraseologie_3. FILTER(lang(?ITS_Phraseologie_3) = ?l)
+                ?phraseologyPart3 schema:citation ?ITS_Phraseologie_Quelle_3. FILTER(lang(?ITS_Phraseologie_Quelle_3) = ?l)
+            }
+
+        }
+    }
+
+
+
+    ### ROMANSH
+    {
+        SELECT DISTINCT
+            ?entry
+
+            ?RMS_Name_1
+            ?RMS_Name_Quelle_1
+            ?RMS_Name_2
+            ?RMS_Name_Quelle_2
+            ?RMS_Name_3
+            ?RMS_Name_Quelle_3
+
+            ?RMS_Terminus_1
+            ?RMS_Terminus_Quelle_1
+            ?RMS_Terminus_2
+            ?RMS_Terminus_Quelle_2
+            ?RMS_Terminus_3
+            ?RMS_Terminus_Quelle_3
+
+            ?RMS_Phraseologie_1
+            ?RMS_Phraseologie_Quelle_1
+            ?RMS_Phraseologie_2
+            ?RMS_Phraseologie_Quelle_2
+            ?RMS_Phraseologie_3
+            ?RMS_Phraseologie_Quelle_3
+
+            ?RMS_Definition_1
+            ?RMS_Definition_Quelle_1
+            ?RMS_Definition_2
+            ?RMS_Definition_Quelle_2
+            ?RMS_Definition_3
+            ?RMS_Definition_Quelle_3
+
+            ?RMS_Abkürzung_1
+            ?RMS_Abkürzung_Quelle_1
+
+
+            ?RMS_Anmerkung_1
+            ?RMS_Anmerkung_Quelle_1
+            ?RMS_Anmerkung_2
+            ?RMS_Anmerkung_Quelle_2
+            ?RMS_Anmerkung_3
+            ?RMS_Anmerkung_Quelle_3
+
+            ?RMS_Land_1
+            ?RMS_Land_2
+            ?RMS_Land_3
+        WHERE {
+            BIND ("rm" as ?l).
+            ?entry a schema:DefinedTerm.
+
+            # Abkürzung
+            OPTIONAL {
+                ?entry schema:alternateName ?RMS_Abkürzung_1. FILTER(lang(?RMS_Abkürzung_1) = ?l)
+                ?entry schema:hasPart ?alternateNamePart.
+                ?alternateNamePart a aschema:Abbreviation.
+                #?alternateNamePart schema:name ?RMS_Abkürzung_1. FILTER(lang(?RMS_Abkürzung_1) = ?l). # To exclude Synonyms.
+                FILTER(STRENDS(str(?alternateNamePart),"abbreviation"))
+                ?alternateNamePart schema:citation ?RMS_Abkürzung_Quelle_1. FILTER(lang(?RMS_Abkürzung_Quelle_1) = ?l).
+            }
+
+            # Land
+            OPTIONAL {
+                ?entry aschema:applicableCountry ?RMS_Land_1. FILTER(lang(?RMS_Land_1) = ?l)
+            }
+
+            # Definition
+            OPTIONAL {
+                ?entry schema:description ?RMS_Definition_1. FILTER(lang(?RMS_Definition_1) = ?l)
+
+                ?entry aschema:descriptionCitation ?RMS_Definition_Quelle_1. FILTER(lang(?RMS_Definition_Quelle_1) = ?l)
+            }
+
+            # Anmerkung
+            OPTIONAL {
+                ?entry aschema:termNote ?RMS_Anmerkung_1. FILTER(lang(?RMS_Anmerkung_1) = ?l)
+
+            }
+            # Anmerkung Quelle
+            OPTIONAL {
+                ?entry aschema:termNoteCitation ?RMS_Anmerkung_Quelle_1. FILTER(lang(?RMS_Anmerkung_Quelle_1) = ?l)
+            }
+
+            # Name
+            OPTIONAL {
+                ?entry a aschema:Name.
+                ?entry schema:name ?RMS_Name_1. FILTER(lang(?RMS_Name_1) = ?l)
+                ?entry schema:citation ?RMS_Name_Quelle_1. FILTER(lang(?RMS_Name_Quelle_1) = ?l)
+
+            }
+
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?namePart.
+                ?namePart a aschema:Name.
+                FILTER(STRENDS(str(?phraseologyPart),"name"))
+                ?namePart schema:name ?RMS_Name_1. FILTER(lang(?RMS_Name_1) = ?l)
+                ?namePart schema:citation ?RMS_Name_Quelle_1. FILTER(lang(?RMS_Name_Quelle_1) = ?l)
+
+            }
+
+            # Term
+            OPTIONAL {
+                ?entry a aschema:Term.
+                ?entry schema:name ?RMS_Terminus_1. FILTER(lang(?RMS_Terminus_1) = ?l)
+
+                ?entry schema:citation ?RMS_Terminus_Quelle_1. FILTER(lang(?RMS_Terminus_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?termPart.
+                ?termPart a aschema:Term.
+                FILTER(STRENDS(str(?phraseologyPart),"term"))
+                ?termPart schema:name ?RMS_Terminus_1. FILTER(lang(?RMS_Terminus_1) = ?l)
+                ?termPart schema:citation ?RMS_Terminus_Quelle_1. FILTER(lang(?RMS_Terminus_Quelle_1) = ?l)
+
+            }
+
+            # Phraseology
+            OPTIONAL {
+                ?entry a aschema:Phraseology.
+                ?entry schema:name ?RMS_Phraseologie_1. FILTER(lang(?RMS_Phraseologie_1) = ?l)
+
+                ?entry schema:citation ?RMS_Phraseologie_Quelle_1. FILTER(lang(?RMS_Phraseologie_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?phraseologyPart.
+                ?phraseologyPart a aschema:Phraseology.
+                FILTER(STRENDS(str(?phraseologyPart),"phraseology"))
+                ?phraseologyPart schema:name ?RMS_Phraseologie_1. FILTER(lang(?RMS_Phraseologie_1) = ?l)
+                ?phraseologyPart schema:citation ?RMS_Phraseologie_Quelle_1. FILTER(lang(?RMS_Phraseologie_Quelle_1) = ?l)
+            }
+
+
+            # Land.2
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart2.
+                FILTER(STRENDS(str(?landPart2),concat("/2/",?l)))
+                ?landPart2 aschema:applicableCountry ?RMS_Land_2. FILTER(lang(?RMS_Land_2) = ?l).
+            }
+            # Land.3
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart3.
+                FILTER(STRENDS(str(?landPart3),concat("/3/",?l)))
+                ?landPart3 aschema:applicableCountry ?RMS_Land_3. FILTER(lang(?RMS_Land_3) = ?l).
+            }
+
+            # Definition.2
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart2.
+                FILTER(STRENDS(str(?definitionPart2),concat("/2/",?l)))
+                ?definitionPart2 schema:description ?RMS_Definition_2. FILTER(lang(?RMS_Definition_2) = ?l)
+                ?definitionPart2 aschema:descriptionCitation ?RMS_Definition_Quelle_2. FILTER(lang(?RMS_Definition_Quelle_2) = ?l)
+            }
+            # Definition.3
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart3.
+                FILTER(STRENDS(str(?definitionPart3),concat("/3/",?l)))
+                ?definitionPart3 schema:description ?RMS_Definition_3. FILTER(lang(?RMS_Definition_3) = ?l)
+                ?definitionPart3 aschema:descriptionCitation ?RMS_Definition_Quelle_3. FILTER(lang(?RMS_Definition_Quelle_3) = ?l)
+            }
+
+            # Anmerkung.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart2.
+                FILTER(STRENDS(str(?termNotePart2),concat("/2/",?l)))
+                ?termNotePart2 aschema:termNote ?RMS_Anmerkung_2. FILTER(lang(?RMS_Anmerkung_2) = ?l)
+            }
+            # Anmerkung.2 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart2.
+                FILTER(STRENDS(str(?termNoteCitationPart2),concat("/2/",?l)))
+                ?termNoteCitationPart2 aschema:termNoteCitation ?RMS_Anmerkung_Quelle_2. FILTER(lang(?RMS_Anmerkung_Quelle_2) = ?l)
+            }
+            # Anmerkung.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart3.
+                FILTER(STRENDS(str(?termNotePart3),concat("/3/",?l)))
+                ?termNotePart3 aschema:termNote ?RMS_Anmerkung_3. FILTER(lang(?RMS_Anmerkung_3) = ?l)
+            }
+            # Anmerkung.3 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart3.
+                FILTER(STRENDS(str(?termNoteCitationPart3),concat("/3/",?l)))
+                ?termNoteCitationPart3 aschema:termNoteCitation ?RMS_Anmerkung_Quelle_3. FILTER(lang(?RMS_Anmerkung_Quelle_3) = ?l)
+            }
+
+            # Name.2
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart2.
+                FILTER(STRENDS(str(?namePart2),concat("/2/",?l)))
+                ?namePart2 a aschema:Name.
+                ?namePart2 schema:name ?RMS_Name_2. FILTER(lang(?RMS_Name_2) = ?l)
+                ?namePart2 schema:citation ?RMS_Name_Quelle_2. FILTER(lang(?RMS_Name_Quelle_2) = ?l)
+            }
+            # Name.3
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart3.
+                FILTER(STRENDS(str(?namePart3),concat("/3/",?l)))
+                ?namePart3 a aschema:Name.
+                ?namePart3 schema:name ?RMS_Name_3. FILTER(lang(?RMS_Name_3) = ?l)
+                ?namePart3 schema:citation ?RMS_Name_Quelle_3. FILTER(lang(?RMS_Name_Quelle_3) = ?l)
+            }
+
+            # Term.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart2.
+                FILTER(STRENDS(str(?termPart2),concat("/2/",?l)))
+                ?termPart2 a aschema:Term.
+                ?termPart2 schema:name ?RMS_Terminus_2. FILTER(lang(?RMS_Terminus_2) = ?l)
+                ?termPart2 schema:citation ?RMS_Terminus_Quelle_2. FILTER(lang(?RMS_Terminus_Quelle_2) = ?l)
+            }
+            # Term.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart3.
+                FILTER(STRENDS(str(?termPart3),concat("/3/",?l)))
+                ?termPart3 a aschema:Term.
+                ?termPart3 schema:name ?RMS_Terminus_3. FILTER(lang(?RMS_Terminus_3) = ?l)
+                ?termPart3 schema:citation ?RMS_Terminus_Quelle_3. FILTER(lang(?RMS_Terminus_Quelle_3) = ?l)
+            }
+
+            # Phraseology.2
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart2.
+                FILTER(STRENDS(str(?phraseologyPart2),concat("/2/",?l)))
+                ?phraseologyPart2 a aschema:Phraseology.
+                ?phraseologyPart2 schema:name ?RMS_Phraseologie_2. FILTER(lang(?RMS_Phraseologie_2) = ?l)
+                ?phraseologyPart2 schema:citation ?RMS_Phraseologie_Quelle_2. FILTER(lang(?RMS_Phraseologie_Quelle_2) = ?l)
+            }
+            # Phraseology.3
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart3.
+                FILTER(STRENDS(str(?phraseologyPart3),concat("/3/",?l)))
+                ?phraseologyPart3 a aschema:Phraseology.
+                ?phraseologyPart3 schema:name ?RMS_Phraseologie_3. FILTER(lang(?RMS_Phraseologie_3) = ?l)
+                ?phraseologyPart3 schema:citation ?RMS_Phraseologie_Quelle_3. FILTER(lang(?RMS_Phraseologie_Quelle_3) = ?l)
+            }
+
+        }
+    }
+
+
+
+    ### ENGLISH
+    {
+        SELECT DISTINCt
+            ?entry
+
+            ?ENG_Name_1
+            ?ENG_Name_Quelle_1
+            ?ENG_Name_2
+            ?ENG_Name_Quelle_2
+            ?ENG_Name_3
+            ?ENG_Name_Quelle_3
+
+            ?ENG_Terminus_1
+            ?ENG_Terminus_Quelle_1
+            ?ENG_Terminus_2
+            ?ENG_Terminus_Quelle_2
+            ?ENG_Terminus_3
+            ?ENG_Terminus_Quelle_3
+
+            ?ENG_Phraseologie_1
+            ?ENG_Phraseologie_Quelle_1
+            ?ENG_Phraseologie_2
+            ?ENG_Phraseologie_Quelle_2
+            ?ENG_Phraseologie_3
+            ?ENG_Phraseologie_Quelle_3
+
+            ?ENG_Definition_1
+            ?ENG_Definition_Quelle_1
+            ?ENG_Definition_2
+            ?ENG_Definition_Quelle_2
+            ?ENG_Definition_3
+            ?ENG_Definition_Quelle_3
+
+            ?ENG_Abkürzung_1
+            ?ENG_Abkürzung_Quelle_1
+
+
+            ?ENG_Anmerkung_1
+            ?ENG_Anmerkung_Quelle_1
+            ?ENG_Anmerkung_2
+            ?ENG_Anmerkung_Quelle_2
+            ?ENG_Anmerkung_3
+            ?ENG_Anmerkung_Quelle_3
+
+            ?ENG_Land_1
+            ?ENG_Land_2
+            ?ENG_Land_3
+        WHERE {
+            BIND ("en" as ?l).
+            ?entry a schema:DefinedTerm.
+
+            # Abkürzung
+            OPTIONAL {
+                ?entry schema:alternateName ?ENG_Abkürzung_1. FILTER(lang(?ENG_Abkürzung_1) = ?l)
+                ?entry schema:hasPart ?alternateNamePart.
+                ?alternateNamePart a aschema:Abbreviation.
+                #?alternateNamePart schema:name ?ENG_Abkürzung_1. FILTER(lang(?ENG_Abkürzung_1) = ?l). # To exclude Synonyms.
+                FILTER(STRENDS(str(?alternateNamePart),"abbreviation"))
+                ?alternateNamePart schema:citation ?ENG_Abkürzung_Quelle_1. FILTER(lang(?ENG_Abkürzung_Quelle_1) = ?l).
+            }
+
+            # Land
+            OPTIONAL {
+                ?entry aschema:applicableCountry ?ENG_Land_1. FILTER(lang(?ENG_Land_1) = ?l)
+            }
+
+            # Definition
+            OPTIONAL {
+                ?entry schema:description ?ENG_Definition_1. FILTER(lang(?ENG_Definition_1) = ?l)
+
+                ?entry aschema:descriptionCitation ?ENG_Definition_Quelle_1. FILTER(lang(?ENG_Definition_Quelle_1) = ?l)
+            }
+
+            # Anmerkung
+            OPTIONAL {
+                ?entry aschema:termNote ?ENG_Anmerkung_1. FILTER(lang(?ENG_Anmerkung_1) = ?l)
+
+            }
+            # Anmerkung Quelle
+            OPTIONAL {
+                ?entry aschema:termNoteCitation ?ENG_Anmerkung_Quelle_1. FILTER(lang(?ENG_Anmerkung_Quelle_1) = ?l)
+            }
+
+            # Name
+            OPTIONAL {
+                ?entry a aschema:Name.
+                ?entry schema:name ?ENG_Name_1. FILTER(lang(?ENG_Name_1) = ?l)
+                ?entry schema:citation ?ENG_Name_Quelle_1. FILTER(lang(?ENG_Name_Quelle_1) = ?l)
+
+            }
+
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?namePart.
+                ?namePart a aschema:Name.
+                FILTER(STRENDS(str(?phraseologyPart),"name"))
+                ?namePart schema:name ?ENG_Name_1. FILTER(lang(?ENG_Name_1) = ?l)
+                ?namePart schema:citation ?ENG_Name_Quelle_1. FILTER(lang(?ENG_Name_Quelle_1) = ?l)
+
+            }
+
+            # Term
+            OPTIONAL {
+                ?entry a aschema:Term.
+                ?entry schema:name ?ENG_Terminus_1. FILTER(lang(?ENG_Terminus_1) = ?l)
+
+                ?entry schema:citation ?ENG_Terminus_Quelle_1. FILTER(lang(?ENG_Terminus_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?termPart.
+                ?termPart a aschema:Term.
+                FILTER(STRENDS(str(?phraseologyPart),"term"))
+                ?termPart schema:name ?ENG_Terminus_1. FILTER(lang(?ENG_Terminus_1) = ?l)
+                ?termPart schema:citation ?ENG_Terminus_Quelle_1. FILTER(lang(?ENG_Terminus_Quelle_1) = ?l)
+
+            }
+
+            # Phraseology
+            OPTIONAL {
+                ?entry a aschema:Phraseology.
+                ?entry schema:name ?ENG_Phraseologie_1. FILTER(lang(?ENG_Phraseologie_1) = ?l)
+
+                ?entry schema:citation ?ENG_Phraseologie_Quelle_1. FILTER(lang(?ENG_Phraseologie_Quelle_1) = ?l)
+
+            }
+            OPTIONAL { # Wenn in der Type in der Sprache anders als Haupteintrag
+                ?entry schema:hasPart ?phraseologyPart.
+                ?phraseologyPart a aschema:Phraseology.
+                FILTER(STRENDS(str(?phraseologyPart),"phraseology"))
+                ?phraseologyPart schema:name ?ENG_Phraseologie_1. FILTER(lang(?ENG_Phraseologie_1) = ?l)
+                ?phraseologyPart schema:citation ?ENG_Phraseologie_Quelle_1. FILTER(lang(?ENG_Phraseologie_Quelle_1) = ?l)
+            }
+
+
+            # Land.2
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart2.
+                FILTER(STRENDS(str(?landPart2),concat("/2/",?l)))
+                ?landPart2 aschema:applicableCountry ?ENG_Land_2. FILTER(lang(?ENG_Land_2) = ?l).
+            }
+            # Land.3
+            OPTIONAL {
+                ?entry schema:hasPart ?landPart3.
+                FILTER(STRENDS(str(?landPart3),concat("/3/",?l)))
+                ?landPart3 aschema:applicableCountry ?ENG_Land_3. FILTER(lang(?ENG_Land_3) = ?l).
+            }
+
+            # Definition.2
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart2.
+                FILTER(STRENDS(str(?definitionPart2),concat("/2/",?l)))
+                ?definitionPart2 schema:description ?ENG_Definition_2. FILTER(lang(?ENG_Definition_2) = ?l)
+                ?definitionPart2 aschema:descriptionCitation ?ENG_Definition_Quelle_2. FILTER(lang(?ENG_Definition_Quelle_2) = ?l)
+            }
+            # Definition.3
+            OPTIONAL {
+                ?entry schema:hasPart ?definitionPart3.
+                FILTER(STRENDS(str(?definitionPart3),concat("/3/",?l)))
+                ?definitionPart3 schema:description ?ENG_Definition_3. FILTER(lang(?ENG_Definition_3) = ?l)
+                ?definitionPart3 aschema:descriptionCitation ?ENG_Definition_Quelle_3. FILTER(lang(?ENG_Definition_Quelle_3) = ?l)
+            }
+
+            # Anmerkung.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart2.
+                FILTER(STRENDS(str(?termNotePart2),concat("/2/",?l)))
+                ?termNotePart2 aschema:termNote ?ENG_Anmerkung_2. FILTER(lang(?ENG_Anmerkung_2) = ?l)
+            }
+            # Anmerkung.2 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart2.
+                FILTER(STRENDS(str(?termNoteCitationPart2),concat("/2/",?l)))
+                ?termNoteCitationPart2 aschema:termNoteCitation ?ENG_Anmerkung_Quelle_2. FILTER(lang(?ENG_Anmerkung_Quelle_2) = ?l)
+            }
+            # Anmerkung.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termNotePart3.
+                FILTER(STRENDS(str(?termNotePart3),concat("/3/",?l)))
+                ?termNotePart3 aschema:termNote ?ENG_Anmerkung_3. FILTER(lang(?ENG_Anmerkung_3) = ?l)
+            }
+            # Anmerkung.3 Quelle
+            OPTIONAL {
+                ?entry schema:hasPart ?termNoteCitationPart3.
+                FILTER(STRENDS(str(?termNoteCitationPart3),concat("/3/",?l)))
+                ?termNoteCitationPart3 aschema:termNoteCitation ?ENG_Anmerkung_Quelle_3. FILTER(lang(?ENG_Anmerkung_Quelle_3) = ?l)
+            }
+
+            # Name.2
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart2.
+                FILTER(STRENDS(str(?namePart2),concat("/2/",?l)))
+                ?namePart2 a aschema:Name.
+                ?namePart2 schema:name ?ENG_Name_2. FILTER(lang(?ENG_Name_2) = ?l)
+                ?namePart2 schema:citation ?ENG_Name_Quelle_2. FILTER(lang(?ENG_Name_Quelle_2) = ?l)
+            }
+            # Name.3
+            OPTIONAL {
+                ?entry schema:hasPart ?namePart3.
+                FILTER(STRENDS(str(?namePart3),concat("/3/",?l)))
+                ?namePart3 a aschema:Name.
+                ?namePart3 schema:name ?ENG_Name_3. FILTER(lang(?ENG_Name_3) = ?l)
+                ?namePart3 schema:citation ?ENG_Name_Quelle_3. FILTER(lang(?ENG_Name_Quelle_3) = ?l)
+            }
+
+            # Term.2
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart2.
+                FILTER(STRENDS(str(?termPart2),concat("/2/",?l)))
+                ?termPart2 a aschema:Term.
+                ?termPart2 schema:name ?ENG_Terminus_2. FILTER(lang(?ENG_Terminus_2) = ?l)
+                ?termPart2 schema:citation ?ENG_Terminus_Quelle_2. FILTER(lang(?ENG_Terminus_Quelle_2) = ?l)
+            }
+            # Term.3
+            OPTIONAL {
+                ?entry schema:hasPart ?termPart3.
+                FILTER(STRENDS(str(?termPart3),concat("/3/",?l)))
+                ?termPart3 a aschema:Term.
+                ?termPart3 schema:name ?ENG_Terminus_3. FILTER(lang(?ENG_Terminus_3) = ?l)
+                ?termPart3 schema:citation ?ENG_Terminus_Quelle_3. FILTER(lang(?ENG_Terminus_Quelle_3) = ?l)
+            }
+
+            # Phraseology.2
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart2.
+                FILTER(STRENDS(str(?phraseologyPart2),concat("/2/",?l)))
+                ?phraseologyPart2 a aschema:Phraseology.
+                ?phraseologyPart2 schema:name ?ENG_Phraseologie_2. FILTER(lang(?ENG_Phraseologie_2) = ?l)
+                ?phraseologyPart2 schema:citation ?ENG_Phraseologie_Quelle_2. FILTER(lang(?ENG_Phraseologie_Quelle_2) = ?l)
+            }
+            # Phraseology.3
+            OPTIONAL {
+                ?entry schema:hasPart ?phraseologyPart3.
+                FILTER(STRENDS(str(?phraseologyPart3),concat("/3/",?l)))
+                ?phraseologyPart3 a aschema:Phraseology.
+                ?phraseologyPart3 schema:name ?ENG_Phraseologie_3. FILTER(lang(?ENG_Phraseologie_3) = ?l)
+                ?phraseologyPart3 schema:citation ?ENG_Phraseologie_Quelle_3. FILTER(lang(?ENG_Phraseologie_Quelle_3) = ?l)
+            }
+
+        }
+    }
+
+
+}

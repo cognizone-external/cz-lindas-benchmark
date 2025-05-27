@@ -1,0 +1,130 @@
+#pragma push.filters aggressive
+
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+
+SELECT ?collection
+    ?collectionNameDe ?collectionNameFr ?collectionNameIt ?collectionNameEn ?collectionNameRt
+    ?sub
+    ?nameDe ?nameFr ?nameIt ?nameEn ?nameRt
+    ?abbvrDe ?abbvrFr ?abbvrIt ?abbvrEn ?abbvrRt
+    ?descriptionDe ?descriptionFr ?descriptionIt ?descriptionEn ?descriptionRt
+    ?citationDe ?citationFr ?citationIt ?citationEn ?citationRt
+    ?synonymDe ?synonymFr ?synonymIt ?synonymEn ?synonymRt
+    #?phraseology
+    #?Kontext
+    #?Anmerkung
+    #?Land
+
+WHERE {
+
+    VALUES ?collection {termdat:LUFT24}
+
+    ?sub schema:inDefinedTermSet ?collection .
+
+    ?collection schema:name ?collectionNameDe.
+    FILTER(lang(?collectionNameDe) = "de")
+    ?collection schema:name ?collectionNameFr.
+    FILTER(lang(?collectionNameFr) = "fr")
+    ?collection schema:name ?collectionNameIt.
+    FILTER(lang(?collectionNameIt) = "it")
+    OPTIONAL { ?collection schema:name ?collectionNameEn.
+               FILTER(lang(?collectionNameEn) = "en")  }
+    OPTIONAL {?collection schema:name ?collectionNameRm.
+              FILTER(lang(?collectionNameRm) = "rm")  }
+
+    ?sub schema:name ?nameDe.
+    FILTER(lang(?nameDe) = "de")
+    ?sub schema:name ?nameFr.
+    FILTER(lang(?nameFr) = "fr")
+    ?sub schema:name ?nameIt.
+    FILTER(lang(?nameIt) = "it")
+    OPTIONAL { ?sub schema:name ?nameEn.
+               FILTER(lang(?nameEn) = "en")}
+    OPTIONAL { ?sub schema:name ?nameRm.
+               FILTER(lang(?nameRm) = "rm")}
+
+    OPTIONAL { ?sub schema:description ?descriptionDe.
+               FILTER(lang(?descriptionDe) = "de")}
+    OPTIONAL { ?sub schema:description ?descriptionFr.
+               FILTER(lang(?descriptionFr) = "fr")}
+    OPTIONAL { ?sub schema:description ?descriptionIt.
+               FILTER(lang(?descriptionIt) = "it")  }
+    OPTIONAL { ?sub schema:description ?descriptionEn.
+               FILTER(lang(?descriptionEn) = "en")  }
+    OPTIONAL { ?sub schema:description ?descriptionRm.
+               FILTER(lang(?descriptionRm) = "rm")  }
+
+
+    OPTIONAL {?sub schema:citation ?citationDe.
+              FILTER(lang(?citationDe) = "de")}
+    OPTIONAL { ?sub schema:citation ?citationFr.
+               FILTER(lang(?citationFr) = "fr")}
+    OPTIONAL {  ?sub schema:citation ?citationIt.
+                FILTER(lang(?citationIt) = "it")   }
+    OPTIONAL {?sub schema:citation ?citationEn.
+              FILTER(lang(?citationEn) = "en")}
+    OPTIONAL {?sub schema:citation ?citationRm.
+              FILTER(lang(?citationRm) = "rm")}
+
+    OPTIONAL {?sub schema:alternateName ?abbrvDe.
+              FILTER(lang(?abbrvDe) = "de") }
+    OPTIONAL {?sub schema:alternateName ?abbrvFr.
+              FILTER(lang(?abbrvFr) = "fr")}
+    OPTIONAL {?sub schema:alternateName ?abbrvIt.
+              FILTER(lang(?abbrvIt) = "it")}
+    OPTIONAL {?sub schema:alternateName ?abbrvEn.
+              FILTER(lang(?abbrvEn) = "en") }
+    OPTIONAL {?sub schema:alternateName ?abbrvRm.
+              FILTER(lang(?abbrvRm) = "rm") }
+
+    OPTIONAL {
+        SELECT ?sub (group_concat(?sDe; separator=", ") as ?synonymDe) WHERE {
+            ?sub schema:hasPart ?part.
+            ?part a <https://schema.ld.admin.ch/Synonym>.
+            ?part schema:name ?sDe.
+            FILTER(lang(?sDe) = "de")
+        } GROUP BY ?sub
+    }
+
+    OPTIONAL {
+        SELECT ?sub (group_concat(?sFr; separator=", ") as ?synonymFr) WHERE {
+            ?sub schema:hasPart ?part.
+            ?part a <https://schema.ld.admin.ch/Synonym>.
+            ?part schema:name ?sFr.
+            FILTER(lang(?sFr) = "fr")
+        } GROUP BY ?sub
+    }
+
+    OPTIONAL {
+        SELECT ?sub (group_concat(?sIt; separator=", ") as ?synonymIt) WHERE {
+            ?sub schema:hasPart ?part.
+            ?part a <https://schema.ld.admin.ch/Synonym>.
+            ?part schema:name ?sIt.
+            FILTER(lang(?sIt) = "it")
+        } GROUP BY ?sub
+    }
+
+    OPTIONAL {
+        SELECT ?sub (group_concat(?sEn; separator=", ") as ?synonymEn) WHERE {
+            ?sub schema:hasPart ?part.
+            ?part a <https://schema.ld.admin.ch/Synonym>.
+            ?part schema:name ?sEn.
+            FILTER(lang(?sEn) = "en")
+        } GROUP BY ?sub
+    }
+
+    OPTIONAL {
+        SELECT ?sub (group_concat(?sRm; separator=", ") as ?synonymRm) WHERE {
+            ?sub schema:hasPart ?part.
+            ?part a <https://schema.ld.admin.ch/Synonym>.
+            ?part schema:name ?sRm.
+            FILTER(lang(?sRm) = "rm")
+        } GROUP BY ?sub
+    }
+
+}
+
+LIMIT 1000

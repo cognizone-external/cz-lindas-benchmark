@@ -1,0 +1,25 @@
+PREFIX cube: <https://cube.link/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 WHERE {
+  <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/9> cube:observationSet/cube:observation ?observation .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/canton> ?dimension0 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-animal-category> ?dimension1 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/genetically-modified> ?dimension2 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-experiment-category> ?dimension3 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-disease-category> ?dimension4 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-institute> ?dimension5 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-legal-restriction> ?dimension6 .
+  ?observation <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/degree-of-severity> ?dimension7 .
+  VALUES ?dimension0 { <https://ld.admin.ch/country/CHE> }
+  BIND(?dimension1 = <https://ld.admin.ch/cube/dimension/tv_species/20> AS ?d1)
+  BIND(?dimension2 = <https://ld.admin.ch/cube/dimension/YesNo/all> AS ?d2)
+  BIND(?dimension3 = <https://ld.admin.ch/cube/dimension/tv_experimentCategory/0> AS ?d3)
+  BIND(?dimension4 = <https://ld.admin.ch/cube/dimension/tv_diseasesCategory/0> AS ?d4)
+  BIND(?dimension5 = <https://ld.admin.ch/cube/dimension/tv_institutesCategory/all> AS ?d5)
+  BIND(?dimension6 = <https://ld.admin.ch/cube/dimension/tv_LegalRestritctions/all> AS ?d6)
+  BIND(?dimension7 = <https://ld.admin.ch/cube/dimension/tv_DegreeOfSeverity/all> AS ?d7)
+}
+ORDER BY DESC(?d1) DESC(?d2) DESC(?d3) DESC(?d4) DESC(?d5) DESC(?d6) DESC(?d7)
+LIMIT 1

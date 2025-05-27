@@ -1,0 +1,5 @@
+PREFIX schema: <http://schema.org/>
+
+SELECT ?unversionedIri WHERE {
+  ?unversionedIri schema:hasPart <https://environment.ld.admin.ch/foen/nfi/nfi_C-96/cube/2024-1> .
+}
