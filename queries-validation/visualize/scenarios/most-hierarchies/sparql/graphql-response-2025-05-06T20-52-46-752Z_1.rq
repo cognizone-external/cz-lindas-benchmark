@@ -1,0 +1,11 @@
+PREFIX cube: <https://cube.link/>
+PREFIX schema: <http://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+SELECT ?dimensionIri ?version ?nodeKind WHERE {
+  <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/9> cube:observationConstraint/sh:property ?dimension .
+  ?dimension sh:path ?dimensionIri .
+  OPTIONAL { ?dimension schema:version ?version . }
+  OPTIONAL { ?dimension sh:nodeKind ?nodeKind . }
+  FILTER(?dimensionIri IN (<https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/canton>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-animal-category>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/genetically-modified>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-experiment-category>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-disease-category>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-institute>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-legal-restriction>, <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/degree-of-severity>))
+}

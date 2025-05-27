@@ -1,0 +1,170 @@
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+SELECT DISTINCT ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 ?dimension8 ?dimension9 ?dimension10 ?dimension11 ?dimension12 ?dimension13 ?dimension14 ?dimension15 ?dimension16 ?dimension17 ?dimension18 ?dimension19 ?dimension20 ?dimension21 ?dimension22 ?dimension23 ?dimension24 ?dimension25 ?dimension26 WHERE {
+  <https://energy.ld.admin.ch/elcom/electricityprice> <https://cube.link/observationSet> ?observationSet0 .
+  ?observationSet0 <https://cube.link/observation> ?source0 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/period> ?dimension0 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/aidfee> ?dimension1 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/charge> ?dimension2 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/fixcosts> ?dimension3 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/fixcostspercent> ?dimension4 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/total> ?dimension5 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/product> ?dimension6 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energy> ?dimension7 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energybeforediscount> ?dimension8 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energydiscount> ?dimension9 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energyname> ?dimension10 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energypowerprice> ?dimension11 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energyworkingprice> ?dimension12 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/energyfixcost> ?dimension13 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridusage> ?dimension14 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridusagebeforediscount> ?dimension15 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridusagediscount> ?dimension16 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridusagename> ?dimension17 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridpowerprice> ?dimension18 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/gridworkingprice> ?dimension19 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/operator> ?dimension20 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/category> ?dimension21 .
+  ?source0 <https://energy.ld.admin.ch/elcom/electricityprice/dimension/municipality> ?dimension22 .
+  FILTER (
+    (?dimension22 = <https://ld.admin.ch/municipality/1>)
+  )
+  FILTER (
+    (?dimension6 = <https://energy.ld.admin.ch/elcom/electricityprice/product/standard>)
+  )
+  FILTER (
+    (?dimension20 = <https://energy.ld.admin.ch/elcom/electricityprice/operator/486>)
+  )
+  FILTER (
+    (?dimension21 = <https://energy.ld.admin.ch/elcom/electricityprice/category/C1>)
+  )
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension23_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension23_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension23_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension23_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension23_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension23_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension23_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension23_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension23_4 .
+    FILTER (
+      (LANG(?dimension23_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension23_0, ?dimension23_1, ?dimension23_2, ?dimension23_3, ?dimension23_4) AS ?dimension23)
+  OPTIONAL {
+    ?dimension20 <http://schema.org/name> ?dimension24_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension24_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension20 <http://schema.org/name> ?dimension24_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension24_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension20 <http://schema.org/name> ?dimension24_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension24_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension20 <http://schema.org/name> ?dimension24_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension24_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension20 <http://schema.org/name> ?dimension24_4 .
+    FILTER (
+      (LANG(?dimension24_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension24_0, ?dimension24_1, ?dimension24_2, ?dimension24_3, ?dimension24_4) AS ?dimension24)
+  OPTIONAL {
+    ?dimension21 <http://schema.org/name> ?dimension25_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension25_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension21 <http://schema.org/name> ?dimension25_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension25_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension21 <http://schema.org/name> ?dimension25_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension25_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension21 <http://schema.org/name> ?dimension25_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension25_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension21 <http://schema.org/name> ?dimension25_4 .
+    FILTER (
+      (LANG(?dimension25_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension25_0, ?dimension25_1, ?dimension25_2, ?dimension25_3, ?dimension25_4) AS ?dimension25)
+  OPTIONAL {
+    ?dimension22 <http://schema.org/name> ?dimension26_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension26_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension22 <http://schema.org/name> ?dimension26_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension26_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension22 <http://schema.org/name> ?dimension26_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension26_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension22 <http://schema.org/name> ?dimension26_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension26_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension22 <http://schema.org/name> ?dimension26_4 .
+    FILTER (
+      (LANG(?dimension26_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension26_0, ?dimension26_1, ?dimension26_2, ?dimension26_3, ?dimension26_4) AS ?dimension26)
+}
+GROUP BY ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 ?dimension8 ?dimension9 ?dimension10 ?dimension11 ?dimension12 ?dimension13 ?dimension14 ?dimension15 ?dimension16 ?dimension17 ?dimension18 ?dimension19 ?dimension20 ?dimension21 ?dimension22 ?dimension23 ?dimension24 ?dimension25 ?dimension26

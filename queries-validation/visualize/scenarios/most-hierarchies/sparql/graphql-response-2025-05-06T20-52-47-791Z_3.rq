@@ -1,0 +1,293 @@
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+SELECT DISTINCT ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 ?dimension8 ?dimension9 ?dimension10 ?dimension11 ?dimension12 ?dimension13 ?dimension14 ?dimension15 ?dimension16 ?dimension17 WHERE {
+  <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/9> <https://cube.link/observationSet> ?observationSet0 .
+  ?observationSet0 <https://cube.link/observation> ?source0 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/year> ?dimension0 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/canton> ?dimension1 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-animal-category> ?dimension2 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/genetically-modified> ?dimension3 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-experiment-category> ?dimension4 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-disease-category> ?dimension5 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-institute> ?dimension6 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/id-of-legal-restriction> ?dimension7 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/degree-of-severity> ?dimension8 .
+  ?source0 <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/count> ?dimension9 .
+  FILTER (
+    (?dimension1 = <https://ld.admin.ch/country/CHE>)
+  )
+  FILTER (
+    (?dimension2 = <https://ld.admin.ch/cube/dimension/tv_species/20>)
+  )
+  FILTER (
+    (?dimension3 = <https://ld.admin.ch/cube/dimension/YesNo/all>)
+  )
+  FILTER (
+    (?dimension4 = <https://ld.admin.ch/cube/dimension/tv_experimentCategory/0>)
+  )
+  FILTER (
+    (?dimension5 = <https://ld.admin.ch/cube/dimension/tv_diseasesCategory/0>)
+  )
+  FILTER (
+    (?dimension6 = <https://ld.admin.ch/cube/dimension/tv_institutesCategory/all>)
+  )
+  FILTER (
+    (?dimension7 = <https://ld.admin.ch/cube/dimension/tv_LegalRestritctions/all>)
+  )
+  FILTER (
+    (?dimension8 = <https://ld.admin.ch/cube/dimension/tv_DegreeOfSeverity/all>)
+  )
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension10_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension10_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension10_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension10_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension10_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension10_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension10_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension10_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension10_4 .
+    FILTER (
+      (LANG(?dimension10_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension10_0, ?dimension10_1, ?dimension10_2, ?dimension10_3, ?dimension10_4) AS ?dimension10)
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension11_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension11_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension11_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension11_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension11_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension11_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension11_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension11_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension11_4 .
+    FILTER (
+      (LANG(?dimension11_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension11_0, ?dimension11_1, ?dimension11_2, ?dimension11_3, ?dimension11_4) AS ?dimension11)
+  OPTIONAL {
+    ?dimension3 <http://schema.org/name> ?dimension12_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension12_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension3 <http://schema.org/name> ?dimension12_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension12_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension3 <http://schema.org/name> ?dimension12_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension12_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension3 <http://schema.org/name> ?dimension12_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension12_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension3 <http://schema.org/name> ?dimension12_4 .
+    FILTER (
+      (LANG(?dimension12_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension12_0, ?dimension12_1, ?dimension12_2, ?dimension12_3, ?dimension12_4) AS ?dimension12)
+  OPTIONAL {
+    ?dimension4 <http://schema.org/name> ?dimension13_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension13_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension4 <http://schema.org/name> ?dimension13_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension13_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension4 <http://schema.org/name> ?dimension13_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension13_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension4 <http://schema.org/name> ?dimension13_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension13_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension4 <http://schema.org/name> ?dimension13_4 .
+    FILTER (
+      (LANG(?dimension13_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension13_0, ?dimension13_1, ?dimension13_2, ?dimension13_3, ?dimension13_4) AS ?dimension13)
+  OPTIONAL {
+    ?dimension5 <http://schema.org/name> ?dimension14_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension14_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension5 <http://schema.org/name> ?dimension14_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension14_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension5 <http://schema.org/name> ?dimension14_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension14_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension5 <http://schema.org/name> ?dimension14_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension14_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension5 <http://schema.org/name> ?dimension14_4 .
+    FILTER (
+      (LANG(?dimension14_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension14_0, ?dimension14_1, ?dimension14_2, ?dimension14_3, ?dimension14_4) AS ?dimension14)
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension15_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension15_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension15_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension15_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension15_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension15_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension15_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension15_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension6 <http://schema.org/name> ?dimension15_4 .
+    FILTER (
+      (LANG(?dimension15_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension15_0, ?dimension15_1, ?dimension15_2, ?dimension15_3, ?dimension15_4) AS ?dimension15)
+  OPTIONAL {
+    ?dimension7 <http://schema.org/name> ?dimension16_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension16_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension7 <http://schema.org/name> ?dimension16_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension16_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension7 <http://schema.org/name> ?dimension16_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension16_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension7 <http://schema.org/name> ?dimension16_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension16_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension7 <http://schema.org/name> ?dimension16_4 .
+    FILTER (
+      (LANG(?dimension16_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension16_0, ?dimension16_1, ?dimension16_2, ?dimension16_3, ?dimension16_4) AS ?dimension16)
+  OPTIONAL {
+    ?dimension8 <http://schema.org/name> ?dimension17_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension17_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension8 <http://schema.org/name> ?dimension17_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension17_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension8 <http://schema.org/name> ?dimension17_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension17_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension8 <http://schema.org/name> ?dimension17_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension17_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension8 <http://schema.org/name> ?dimension17_4 .
+    FILTER (
+      (LANG(?dimension17_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension17_0, ?dimension17_1, ?dimension17_2, ?dimension17_3, ?dimension17_4) AS ?dimension17)
+}
+GROUP BY ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 ?dimension8 ?dimension9 ?dimension10 ?dimension11 ?dimension12 ?dimension13 ?dimension14 ?dimension15 ?dimension16 ?dimension17

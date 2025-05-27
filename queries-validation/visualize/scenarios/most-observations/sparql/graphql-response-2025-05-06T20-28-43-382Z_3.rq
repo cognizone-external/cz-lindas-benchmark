@@ -1,0 +1,17 @@
+PREFIX cube: <https://cube.link/>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?dimension0 ?dimension1 ?dimension2 ?dimension3 WHERE {
+  <https://energy.ld.admin.ch/elcom/electricityprice> cube:observationSet/cube:observation ?observation .
+  ?observation <https://energy.ld.admin.ch/elcom/electricityprice/dimension/municipality> ?dimension0 .
+  ?observation <https://energy.ld.admin.ch/elcom/electricityprice/dimension/product> ?dimension1 .
+  ?observation <https://energy.ld.admin.ch/elcom/electricityprice/dimension/operator> ?dimension2 .
+  ?observation <https://energy.ld.admin.ch/elcom/electricityprice/dimension/category> ?dimension3 .
+  VALUES ?dimension0 { <https://ld.admin.ch/municipality/1> }
+  BIND(?dimension1 = <https://energy.ld.admin.ch/elcom/electricityprice/product/standard> AS ?d1)
+  BIND(?dimension2 = <https://energy.ld.admin.ch/elcom/electricityprice/operator/486> AS ?d2)
+  BIND(?dimension3 = <https://energy.ld.admin.ch/elcom/electricityprice/category/C1> AS ?d3)
+}
+ORDER BY DESC(?d1) DESC(?d2) DESC(?d3)
+LIMIT 1

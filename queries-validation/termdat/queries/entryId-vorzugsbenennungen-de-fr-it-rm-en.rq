@@ -1,0 +1,29 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+
+SELECT ?entryID ?nameDe ?nameFr ?nameIt ?nameEn ?term ?nameRm
+
+WHERE {
+
+    ?term schema:inDefinedTermSet <https://register.ld.admin.ch/termdat/SCHKG24> .
+
+    ?term schema:name ?nameDe.
+    FILTER(lang(?nameDe) = "de")
+    ?term schema:name ?nameFr.
+    FILTER(lang(?nameFr) = "fr")
+    ?term schema:name ?nameIt.
+    FILTER(lang(?nameIt) = "it")
+
+    OPTIONAL {
+        ?term schema:name ?nameRm.
+        FILTER(lang(?nameRm) = "rm")
+
+        ?term schema:name ?nameEn.
+        FILTER(lang(?nameEn) = "en") }
+
+    OPTIONAL { ?sub schema:entryID ?entryID }
+
+} LIMIT 1000
+

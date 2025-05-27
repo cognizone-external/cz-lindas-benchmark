@@ -1,0 +1,5 @@
+PREFIX schema: <http://schema.org/>
+
+SELECT ?unversionedIri WHERE {
+  ?unversionedIri schema:hasPart <https://health.ld.admin.ch/fsvo/TV_DegreeOfSeverity/9> .
+}

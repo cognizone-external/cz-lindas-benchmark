@@ -1,0 +1,268 @@
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+#pragma describe.strategy cbd
+#pragma join.hash off
+
+SELECT ?dimension0 ?dimension1 ?dimension2 ?dimension3 ?dimension4 ?dimension5 ?dimension6 ?dimension7 ?dimension8 ?dimension9 ?dimension10 ?dimension11 ?dimension12 ?dimension13 ?dimension14 ?dimension15 ?dimension16 ?dimension17 ?dimension18 ?dimension19 ?dimension20 ?dimension21 ?dimension22 ?dimension23 ?dimension24 ?dimension25 ?dimension26 ?dimension27 ?dimension28 ?dimension29 ?dimension30 ?dimension31 ?dimension32 ?dimension33 ?dimension34 ?dimension35 ?dimension36 ?dimension37 ?dimension38 ?dimension39 ?dimension40 ?dimension41 ?dimension42 ?dimension43 ?dimension44 ?dimension45 ?dimension46 ?dimension47 ?dimension48 ?dimension49 ?dimension50 ?dimension51 ?dimension52 ?dimension53 ?dimension54 ?dimension55 ?dimension56 ?dimension57 ?dimension58 ?dimension59 ?dimension60 ?dimension61 ?dimension62 ?dimension63 ?dimension64 ?dimension65 ?dimension66 ?dimension67 ?dimension68 ?dimension69 ?dimension70 ?dimension71 ?dimension72 ?dimension73 ?dimension74 ?dimension75 ?dimension76 ?dimension77 WHERE {
+  <https://environment.ld.admin.ch/foen/nfi/nfi_C-96/cube/2024-1> <https://cube.link/observationSet> ?observationSet0 .
+  ?observationSet0 <https://cube.link/observation> ?source0 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE69> ?dimension0 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/inventory> ?dimension1 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/unitOfEvaluation> ?dimension2 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE24r> ?dimension3 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE73r> ?dimension4 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/23> ?dimension5 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE47> ?dimension6 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE3> ?dimension7 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE18> ?dimension8 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE171r> ?dimension9 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/69> ?dimension10 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE73> ?dimension11 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/19r> ?dimension12 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE24> ?dimension13 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/70r> ?dimension14 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/24> ?dimension15 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE210r> ?dimension16 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/19> ?dimension17 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/116r> ?dimension18 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/18r> ?dimension19 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/47r> ?dimension20 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/23r> ?dimension21 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE70r> ?dimension22 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE50r> ?dimension23 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE70> ?dimension24 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/18> ?dimension25 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/2r> ?dimension26 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/3> ?dimension27 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/210> ?dimension28 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/21r> ?dimension29 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/92r> ?dimension30 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/49r> ?dimension31 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE21> ?dimension32 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE18r> ?dimension33 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE116> ?dimension34 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE21r> ?dimension35 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/evaluationType> ?dimension36 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE19r> ?dimension37 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE48> ?dimension38 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/48r> ?dimension39 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/171r> ?dimension40 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/50> ?dimension41 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE3r> ?dimension42 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE48r> ?dimension43 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/3r> ?dimension44 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/47> ?dimension45 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/21> ?dimension46 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE23r> ?dimension47 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/24r> ?dimension48 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE49r> ?dimension49 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/116> ?dimension50 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/49> ?dimension51 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/73> ?dimension52 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/50r> ?dimension53 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE210> ?dimension54 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/70> ?dimension55 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE116r> ?dimension56 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE92r> ?dimension57 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE2r> ?dimension58 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/classificationUnit> ?dimension59 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE69r> ?dimension60 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE50> ?dimension61 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE49> ?dimension62 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE47r> ?dimension63 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/grid> ?dimension64 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/210r> ?dimension65 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/unitOfReference> ?dimension66 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/73r> ?dimension67 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/48> ?dimension68 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE19> ?dimension69 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/69r> ?dimension70 .
+  ?source0 <https://environment.ld.admin.ch/foen/nfi/Topic/SE23> ?dimension71 .
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension72_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension72_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension72_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension72_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension72_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension72_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension72_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension72_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension1 <http://schema.org/name> ?dimension72_4 .
+    FILTER (
+      (LANG(?dimension72_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension72_0, ?dimension72_1, ?dimension72_2, ?dimension72_3, ?dimension72_4) AS ?dimension72)
+  OPTIONAL {
+    ?dimension66 <http://schema.org/name> ?dimension73_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension73_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension66 <http://schema.org/name> ?dimension73_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension73_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension66 <http://schema.org/name> ?dimension73_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension73_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension66 <http://schema.org/name> ?dimension73_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension73_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension66 <http://schema.org/name> ?dimension73_4 .
+    FILTER (
+      (LANG(?dimension73_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension73_0, ?dimension73_1, ?dimension73_2, ?dimension73_3, ?dimension73_4) AS ?dimension73)
+  OPTIONAL {
+    ?dimension59 <http://schema.org/name> ?dimension74_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension74_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension59 <http://schema.org/name> ?dimension74_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension74_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension59 <http://schema.org/name> ?dimension74_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension74_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension59 <http://schema.org/name> ?dimension74_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension74_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension59 <http://schema.org/name> ?dimension74_4 .
+    FILTER (
+      (LANG(?dimension74_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension74_0, ?dimension74_1, ?dimension74_2, ?dimension74_3, ?dimension74_4) AS ?dimension74)
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension75_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension75_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension75_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension75_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension75_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension75_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension75_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension75_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension2 <http://schema.org/name> ?dimension75_4 .
+    FILTER (
+      (LANG(?dimension75_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension75_0, ?dimension75_1, ?dimension75_2, ?dimension75_3, ?dimension75_4) AS ?dimension75)
+  OPTIONAL {
+    ?dimension64 <http://schema.org/name> ?dimension76_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension76_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension64 <http://schema.org/name> ?dimension76_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension76_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension64 <http://schema.org/name> ?dimension76_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension76_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension64 <http://schema.org/name> ?dimension76_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension76_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension64 <http://schema.org/name> ?dimension76_4 .
+    FILTER (
+      (LANG(?dimension76_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension76_0, ?dimension76_1, ?dimension76_2, ?dimension76_3, ?dimension76_4) AS ?dimension76)
+  OPTIONAL {
+    ?dimension36 <http://schema.org/name> ?dimension77_0 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension77_0), "en")
+    )
+  }
+  OPTIONAL {
+    ?dimension36 <http://schema.org/name> ?dimension77_1 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension77_1), "de")
+    )
+  }
+  OPTIONAL {
+    ?dimension36 <http://schema.org/name> ?dimension77_2 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension77_2), "fr")
+    )
+  }
+  OPTIONAL {
+    ?dimension36 <http://schema.org/name> ?dimension77_3 .
+    FILTER (
+      LANGMATCHES(LANG(?dimension77_3), "it")
+    )
+  }
+  OPTIONAL {
+    ?dimension36 <http://schema.org/name> ?dimension77_4 .
+    FILTER (
+      (LANG(?dimension77_4) = "")
+    )
+  }
+  BIND(COALESCE(?dimension77_0, ?dimension77_1, ?dimension77_2, ?dimension77_3, ?dimension77_4) AS ?dimension77)
+}

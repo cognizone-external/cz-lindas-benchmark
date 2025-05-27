@@ -1,0 +1,30 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+SELECT ?sub ?nameDe (group_concat(?synonymDe; separator=", ") as ?synonymsDe)  WHERE {
+
+    # VALUES ?language { "de" }
+
+    ?sub schema:inDefinedTermSet termdat:LUFT23 .
+
+    ?sub schema:name ?nameDe.
+    FILTER(lang(?nameDe) = "de")
+
+    OPTIONAL {
+        ?sub schema:hasPart ?part.
+        ?part a <https://schema.ld.admin.ch/Synonym>.
+        ?part schema:name ?synonymDe.
+        FILTER(lang(?synonymDe) = "de")
+    }
+
+    OPTIONAL {
+        ?sub schema:hasPart ?part.
+        ?part a <https://schema.ld.admin.ch/Synonym>.
+        ?part schema:name ?synonymDe.
+        FILTER(lang(?synonymDe) = "de")
+    }
+
+} GROUP BY ?sub ?nameDe
+
+  LIMIT 100

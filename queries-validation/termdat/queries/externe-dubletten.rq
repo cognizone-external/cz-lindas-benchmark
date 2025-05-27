@@ -1,0 +1,30 @@
+PREFIX schema: <http://schema.org/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX termdat: <https://register.ld.admin.ch/termdat/>
+
+SELECT ?id1 ?name1 ?id2 ?sammlungID2 FROM <https://lindas.admin.ch/fch/termdat> {
+
+    VALUES ?sammlung1 {termdat:UVEK24}
+
+    ?sammlung1 a <http://schema.org/DefinedTermSet> .
+    ?eintrag1 schema:inDefinedTermSet ?sammlung1 .
+    ?eintrag1 schema:identifier ?id1 .
+
+    ?eintrag1 schema:name ?name1 .
+
+    BIND(str(?name1) as ?name1s)
+    FILTER (?name1s != "-")
+
+    FILTER (?eintrag1 != ?eintrag2)
+    FILTER (str(?eintrag1) < str(?eintrag2))
+
+    SERVICE <https://ld.admin.ch/query> {
+        ?sammlung2 a <http://schema.org/DefinedTermSet> .
+        ?sammlung2 schema:identifier ?sammlungID2 .
+        ?eintrag2 schema:inDefinedTermSet ?sammlung2 .
+        ?eintrag2 schema:name ?name1 .
+        ?eintrag2 schema:identifier ?id2 .
+    }
+
+}
