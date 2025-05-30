@@ -5,6 +5,14 @@ Welcome to the LINDAS Triplestore Benchmark repository!
 This repository has been built by Zazuko GmbH on mandate of the Swiss Federal Archives with the aim of comparing the performance of different triplestores.
 A series of SPARQL queries were extracted from the Swiss government SPARQL endpoint, LINDAS, to constitute the benchmarking testbed.
 
+## Results as of 05/2025:
+[Benchmark queries](queries) run against a PROD snapshot of the LINDAS dataset as of 15.5.2025. The query numbering corresponds to the order in [query-files.json](query-files.json) :
+- Stardog: [summary-benchmark-2025-05-22T16-46-07-stardog-benchmark.json](results/summary-benchmark-2025-05-22T16-46-07-stardog-benchmark.json)
+- GraphDB: [summary-benchmark-2025-05-23T22-12-32-graphdb-benchmark.json](results/summary-benchmark-2025-05-23T22-12-32-graphdb-benchmark.json)
+
+[Termdat and Visualize queries](queries-validation) run against a PROD snapshot of the LINDAS dataset as of 15.5.2025. The query numbering corresponds to the order in [query-files-validation.json](query-files-validation.json):
+- Stardog: [summary-visualize-and-termdat-2025-05-28T01-22-12-graphdb.json](results/summary-visualize-and-termdat-2025-05-28T01-22-12-graphdb.json)
+- GraphDB: [summary-visualize-and-termdat-2025-05-28T01-22-12-stardog.json](results/summary-visualize-and-termdat-2025-05-28T01-22-12-stardog.json)
 
 ## Baseline Comparison
 
